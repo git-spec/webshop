@@ -1,0 +1,15 @@
+@mixin ul-flex($direction, $type: none)
+    list-style-type: $type
+    display: flex
+    flex-direction: $direction
+
+@mixin a-deco($color, $deco: none)
+    color: $color
+    text-decoration: $deco
+
+@mixin button($bg-color: transparent, $color: inherit, $font-size: inherit)
+    background-color: $bg-color
+    border-color: transparent
+    color: $color
+    font-size: $font-size
+    cursor: pointer

@@ -1,0 +1,29 @@
+@use './abstracts/index' as *
+@use 'sass:map'
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-family: Helvetica, Arial, sans-serif
+    color: $color-second
+
+body
+    background-color: $color-third
+    
+main
+    min-height: 80vh
+    padding: calc(#{$nav-height}  + #{map.get($rem-sizes, 'xxxm')}) $edge-l-r $text-m $edge-l-r
+
+    h1
+        margin: 1rem 0
+        text-align: center
+
+
+@media only screen and (min-device-width: 640px)
+
+    main
+        padding: calc(#{$nav-height} + #{map.get($rem-sizes, 'xl')} *2) $edge-l-r $text-m $edge-l-r

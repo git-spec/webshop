@@ -1,0 +1,12 @@
+@use 'sass:list'
+@use 'sass:map'
+
+    
+@function get-list($var)
+    $values: ()
+    @if type-of($var) == 'map'
+        @each $key, $value in $var
+            $values: list.append($values, $value)
+        @return $values
+    @else
+        @return $var
