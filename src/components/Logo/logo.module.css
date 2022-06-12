@@ -1,0 +1,8 @@
+.logo {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url("/Adidas_Logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}/*# sourceMappingURL=logo.module.css.map */
