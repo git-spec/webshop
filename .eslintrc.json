@@ -14,6 +14,13 @@
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
+        // "prettier/prettier": [
+        //     "warn",
+        //     {
+        //         "singleQuote": true,
+        //         "trailingComma": "none"
+        //     }
+        // ],
         "require-jsdoc": "off",
         "react/react-in-jsx-scope": "off"
     }
