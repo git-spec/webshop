@@ -1,0 +1,115 @@
+@use "../../../styles/sass/abstracts/index" as *
+
+@mixin nav-item($font-size: inherit)
+    font-size: $font-size
+        
+    &:hover
+        transform: scale(1.1)
+
+    &::before
+        content: attr(title)
+        display: block
+        height: 0
+        visibility: hidden
+        overflow: hidden
+        user-select: none
+        pointer-events: none
+        font-size: 1.3em
+        font-weight: bold
+        
+    
+.list
+    // width: 100%
+    // display: flex
+    // flex-direction: column
+    list-style-type: none
+
+    .topbar
+        width: 100vw
+        height: 0
+        background-color: rgba($color-third, .9)
+        position: fixed
+        left: 0
+        top: calc(#{$nav-height} + .56rem)
+        transition: height .2s ease-in-out
+        z-index: -1
+        display: none
+        border-top: $line-1 solid #ffffff
+
+    .list_item
+        width: inherit
+        height: fit-content
+        cursor: pointer
+        margin-bottom: $text-m
+
+        &.active
+            font-weight: bold
+
+        .item
+            @include nav-item
+
+            display: block
+            transform-origin: left
+
+        .list
+            height: 0
+            overflow: hidden
+            list-style-type: none
+            transition: height ease 0.2s
+
+            .list_item
+                @include nav-item($text-ms)
+
+                margin-top: $text-ms
+                padding-left: $text-ms
+                font-weight: normal
+
+                &.active
+                    font-weight: bold
+
+
+@media only screen and (min-device-width: 640px)
+
+    .list
+        display: flex
+        // flex-direction: row
+        // align-items: flex-end
+        // justify-content: center
+        gap: 1.6vw
+
+        .list_item
+            position: relative
+            width: auto
+            display: inline-block
+            margin: 0
+            padding: 0
+            text-align: center
+
+            .topbar
+                display: block
+                
+                &.open
+                    height: $text-l * 2
+                    transition: height .2s ease-in-out
+
+            .item
+                transform-origin: center
+                
+            .sublist_wrapper
+                position: absolute
+                overflow: visible
+                left: 50%
+                display: flex
+                flex-direction: row
+                justify-content: center
+                margin-top: $text-l
+
+            .list
+                position: absolute
+                display: flex
+                flex-direction: row
+                gap: $text-ms
+
+                .list_item
+                    margin-top: 0
+                    padding-left: 0

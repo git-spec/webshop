@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "item": "Produkte",
+            "subItem": [
+                {
+                    "item": "Produktgruppe1",
+                    "url": "/produkte/produktgruppe1"
+                },
+                {
+                    "item": "Produktgruppe2",
+                    "url": "/produkte/produktgruppe2"
+                }
+            ]
+        },
+        {
+            "item": "Philosophie",
+            "url": "/philosophie"
+        }
+    ]
+}

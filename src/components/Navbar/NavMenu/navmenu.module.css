@@ -1,0 +1,124 @@
+.list {
+  list-style-type: none;
+}
+.list .topbar {
+  width: 100vw;
+  height: 0;
+  background-color: rgba(38, 161, 189, 0.9);
+  position: fixed;
+  left: 0;
+  top: calc(3rem + .6rem);
+  transition: height 0.2s ease-in-out;
+  z-index: -1;
+  display: none;
+  border-top: 0.1rem solid #ffffff;
+}
+.list .list_item {
+  width: inherit;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.list .list_item.active {
+  font-weight: bold;
+}
+.list .list_item .item {
+  font-size: inherit;
+  display: block;
+  transform-origin: left;
+}
+.list .list_item .item:hover {
+  transform: scale(1.1);
+}
+.list .list_item .item::before {
+  content: attr(title);
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.list .list_item .list {
+  height: 0;
+  overflow: hidden;
+  list-style-type: none;
+  transition: height ease 0.2s;
+}
+.list .list_item .list .list_item {
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+  padding-left: 0.8rem;
+  font-weight: normal;
+}
+.list .list_item .list .list_item:hover {
+  transform: scale(1.1);
+}
+.list .list_item .list .list_item::before {
+  content: attr(title);
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.list .list_item .list .list_item.active {
+  font-weight: bold;
+}
+
+@media only screen and (min-device-width: 640px) {
+  .list {
+    display: flex;
+    gap: 1.6vw;
+  }
+  .list .list_item {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .list .list_item .topbar {
+    display: block;
+  }
+  .list .list_item .topbar.open {
+    height: 3.6rem;
+    transition: height 0.2s ease-in-out;
+  }
+  .list .list_item .item {
+    transform-origin: center;
+  }
+  .list .list_item .sublist_wrapper {
+    position: absolute;
+    overflow: visible;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.8rem;
+  }
+  .list .list_item .list {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  .list .list_item .list .list_item {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=navmenu.module.css.map */
