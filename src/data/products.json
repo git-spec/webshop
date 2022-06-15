@@ -1,0 +1,119 @@
+{
+    "productgroup1": [
+        {
+            "id": 1,
+            "name": "Produkt 1",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisici elit.",
+            "price": 8700,
+            "image": "/images/Superstar_Schuh.png"
+        },
+        {
+            "id": 2,
+            "name": "Produkt 2",
+            "description": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "price": 12500,
+            "image": "/images/Rom_Schuh_Braun_EE5747_01_standard.png"
+        },
+        {
+            "id": 3,
+            "name": "Produkt 3",
+            "description": "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "price": 9500,
+            "image": "/images/Samba_Schuh_klein.png"
+        },
+        {
+            "id": 4,
+            "name": "Produkt 4",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "price": 22500,
+            "image": "/images/Nite_Jogger_Schuh_Schwarz_FW4275_01_standard.png"
+        },
+        {
+            "id": 5,
+            "name": "Produkt 5",
+            "description": "No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+            "price": 16500,
+            "image": "/images/NMD_R1_Schuh_Grau_EH0044_01_standard.png"
+        },
+        {
+            "id": 6,
+            "name": "Produkt 6",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 14900,
+            "image": "/images/Continental_80_Baara_Schuh_Schwarz_EF6770_01_standard.png"
+        },
+        {
+            "id": 7,
+            "name": "Produkt 7",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 18900,
+            "image": "/images/SL_72_Schuh_Grun_EG5198_01_standard.png"
+        },
+        {
+            "id": 8,
+            "name": "Produkt 8",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 18900,
+            "image": "/images/Campus_ADV_Schuh_Gelb_EF8474_01_standard.png"
+        }
+    ],
+
+    "productgroup2": [
+        {
+            "id": 9,
+            "name": "Produkt 9",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisici elit.",
+            "price": 4200,
+            "image": "/images/adicolor-stoffhut_klein.png"
+        },
+        {
+            "id": 10,
+            "name": "Produkt 10",
+            "description": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "price": 8500,
+            "image": "/images/osr-w-3s-crew_klein.png"
+        },
+        {
+            "id": 11,
+            "name": "Produkt 11",
+            "description": "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "price": 5900,
+            "image": "/images/trefoil-baseball-kappe_klein.png"
+        },
+        {
+            "id": 12,
+            "name": "Produkt 12",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "price": 5600,
+            "image": "/images/graphic-kappe.png"
+        },
+        {
+            "id": 13,
+            "name": "Produkt 13",
+            "description": "No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+            "price": 4600,
+            "image": "/images/baseball-kappe.png"
+        },
+        {
+            "id": 14,
+            "name": "Produkt 14",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 5900,
+            "image": "/images/cuffed-trainingshose.png"
+        },
+        {
+            "id": 15,
+            "name": "Produkt 15",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 6900,
+            "image": "/images/how-we-do-3-4-tight.png"
+        },
+        {
+            "id": 16,
+            "name": "Produkt 16",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 1500,
+            "image": "/images/low-cut-socken_-3-paar_low.png"
+        }
+    ]
+}
