@@ -1,0 +1,48 @@
+@use '../../styles/sass/abstracts/index' as *
+@use 'sass:list'
+
+    
+@mixin grid-size($column: auto-fit)
+
+    display: grid
+    grid-template-columns: repeat($column, minmax(320px, 1fr))
+
+@mixin grid-gap($gap-col: 0, $gap-row: 0)
+    @if $gap-col != 0
+        column-gap: $gap-col
+    @if $gap-row != 0
+        row-gap: $gap-row
+    
+@mixin grid-gap-classes($gap-sizes, $idx: 0)
+    @for $i from 1 through list.length($gap-sizes)
+        &_c#{$i}
+            @if $idx != 0
+                @include grid-size($column: #{$idx}fr)
+            @else 
+                @include grid-size
+            @include grid-gap($gap-col: list.nth($gap-sizes, $i))
+            @for $x from 1 through list.length($gap-sizes)
+                &_r#{$x}
+                    @if $idx != 0
+                        @include grid-size($column: #{$idx}fr)
+                    @else 
+                        @include grid-size
+                    @include grid-gap($gap-row: list.nth($gap-sizes, $x))
+        &_r#{$i}
+            @if $idx != 0
+                @include grid-size($column: #{$idx}fr)
+            @else 
+                @include grid-size
+            @include grid-gap($gap-row: list.nth($gap-sizes, $i))
+    
+@mixin grid-classes($col, $gap-sizes)
+    @include grid-gap-classes($gap-sizes)
+    @for $i from 1 through $col
+        &_#{$i}
+            @include grid-size($column: #{$i}fr)
+            @include grid-gap-classes($gap-sizes, $i)
+         
+    
+.grid
+    @include grid-size
+    @include grid-classes(5, get-list($rem-sizes))
