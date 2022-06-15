@@ -111,15 +111,15 @@
   }
 }
 .bar {
-  height: 3rem;
-  width: 100%;
   position: fixed;
+  width: 100%;
 }
 .bar ul a {
   color: #ffffff;
   text-decoration: none;
 }
 .bar .wrapper {
+  height: 3rem;
   background-color: #26a1bd;
   padding: 1rem 6vw 0.6rem 6vw;
   display: grid;
@@ -146,8 +146,7 @@
   position: absolute;
   top: 0;
   left: -50vw;
-  margin-top: 3rem;
-  padding: 2.4rem 6vw 0 6vw;
+  padding: calc(3rem + 2.4rem) 6vw 0 6vw;
   z-index: -1;
   transition: left 0.2s ease-in-out;
 }
@@ -245,10 +244,8 @@
 }
 
 @media only screen and (min-device-width: 640px) {
-  .bar {
-    height: calc(3rem * 1.5);
-  }
   .bar .wrapper {
+    height: 3.6rem;
     grid-template-columns: 20% 60% 20%;
     padding-top: 1.8rem;
   }
@@ -274,6 +271,8 @@
     margin-top: 0;
     padding: 0;
     z-index: 0;
+    display: flex;
+    align-items: flex-end;
   }
   .bar .wrapper .menu_wrapper .menu_btn {
     display: none;

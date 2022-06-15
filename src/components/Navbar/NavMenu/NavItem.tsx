@@ -20,7 +20,7 @@ type Props = INavItem & {
     children?: ReactElement;
     subItem?: boolean;
     currItem?: string | null;
-    location: string | null;
+    location?: string | null;
     callback: (item: string | null) => void;
 };
 
@@ -53,6 +53,7 @@ const NavItem: FunctionComponent<Props> = (props: Props): ReactElement => {
             setState({ ...state, currItem: currItem, isOpen: false });
 
         location !== state.location &&
+            location &&
             setState({ ...state, isOpen: false, location: location });
     }, [currItem, location]);
 

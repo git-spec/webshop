@@ -8,22 +8,20 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   color: #ffffff;
 }
-
-body {
+html body {
   background-color: #26a1bd;
 }
-
-main {
+html body #__next > main {
   min-height: 80vh;
-  padding: calc(3rem + 1.4rem) 6vw 1rem 6vw;
+  padding: calc(3.6rem + 1.4rem) 6vw 1rem 6vw;
 }
-main h1 {
+html body #__next > main h1 {
   margin: 1rem 0;
   text-align: center;
 }
 
 @media only screen and (min-device-width: 640px) {
-  main {
-    padding: calc(3rem + 2rem *2) 6vw 1rem 6vw;
+  html body #__next > main {
+    padding: calc(3.6rem + 2rem * 2) 6vw 1rem 6vw;
   }
 }/*# sourceMappingURL=style.css.map */
