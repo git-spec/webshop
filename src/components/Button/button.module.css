@@ -1,0 +1,9 @@
+.btn {
+  border: solid #65ff9d 0.1rem;
+  border-radius: 20%;
+  background: rgba(255, 0, 0, 0);
+  font-size: inherit;
+  color: #65ff9d;
+  cursor: pointer;
+  padding: 0.4rem;
+}/*# sourceMappingURL=button.module.css.map */
