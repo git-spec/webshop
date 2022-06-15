@@ -1,0 +1,43 @@
+@use '../../styles/sass/abstracts/_index' as *
+    
+// .card
+//     overflow: hidden
+//     display: flex
+//     flex-direction: column
+
+.container
+    overflow: hidden
+    display: grid
+    grid-template-rows: auto 1fr auto
+    grid-template-areas: "header" "main" "footer"
+    border: 1px dashed $color-line
+    // border-image: url("/dash.png") 2 round
+    // border-image-source: url("/images/dash.png")
+    // border-image-width: 1
+    // border-image-slice: 2
+    // border-image-repeat: round
+    border-radius: .8rem
+    padding: 1rem
+
+.header
+    height: fit-content
+    grid-area: header
+
+.main
+    grid-area: main
+    margin: 0
+    padding: 0
+
+    h3
+        color: $color-sixth
+        margin: 1rem 0
+
+    p
+        margin-bottom: 2rem
+        text-align: justify
+
+.footer
+    width: 100%
+    grid-area: footer
+    margin: 0
+    align-self: flex-end

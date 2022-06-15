@@ -1,0 +1,37 @@
+.container {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  border: 1px dashed #ffffff;
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.header {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  margin: 0;
+  padding: 0;
+}
+.main h3 {
+  color: #ffcf87;
+  margin: 1rem 0;
+}
+.main p {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.footer {
+  width: 100%;
+  grid-area: footer;
+  margin: 0;
+  align-self: flex-end;
+}/*# sourceMappingURL=card.module.css.map */
