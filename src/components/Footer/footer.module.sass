@@ -1,0 +1,26 @@
+@use '../../styles/sass/abstracts/index' as *
+
+
+.footer
+    // position: fixed
+    // bottom: 0
+    display: flex
+    flex-direction: column
+    // width: 100vw
+    padding: $text-xxl $edge-l-r $text-l $edge-l-r
+
+    ul
+        @include ul-flex(row)
+        
+        justify-content: center
+        gap: 2vw
+        font-size: $text-ms
+        margin-bottom: $text-sl
+
+        a
+            @include a-deco($color-second)
+
+    p
+        text-align: center
+        font-size: $text-s
+

@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 6vw 1.8rem 6vw;
+}
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.footer ul a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer p {
+  text-align: center;
+  font-size: 0.6rem;
+}/*# sourceMappingURL=footer.module.css.map */
