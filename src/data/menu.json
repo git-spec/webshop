@@ -1,15 +1,15 @@
 {
     "items": [
         {
-            "item": "Produkte",
+            "item": "Products",
             "subItem": [
                 {
-                    "item": "Produktgruppe1",
-                    "url": "/produkte/produktgruppe1"
+                    "item": "Shoes",
+                    "url": "/products/shoes"
                 },
                 {
-                    "item": "Produktgruppe2",
-                    "url": "/produkte/produktgruppe2"
+                    "item": "Accessoires",
+                    "url": "/products/accessoires"
                 }
             ]
         },

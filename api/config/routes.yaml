@@ -1,0 +1,26 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+kernel:
+    resource: ../src/Kernel.php
+    type: attribute
+
+# controllers:
+#     resource: ../src/Controller/
+#     type: annotation
+
+# product_list:
+#     path: /api/products
+#     controller: App\Controller\ProductController::index
+#     methods: [GET]
+
+# product_create:
+#     path: /api/products
+#     controller: App\Controller\ProductController::create
+#     methods: [POST]
+
+# product_update:
+#     path: /api/products/{code}
+#     controller: App\Controller\ProductController::update
+#     methods: [PUT]
