@@ -75,7 +75,8 @@ const NavItem: FunctionComponent<Props> = (props: Props): ReactElement => {
                     onTouchStart={(e) => {
                         e.stopPropagation();
                         setState({ ...state, isOpen: !state.isOpen });
-                        e.target.href &&
+                        // e.target.href &&
+                        url &&
                             callback &&
                             callback(checkUrl(item, url.toString()));
                     }}
@@ -89,7 +90,8 @@ const NavItem: FunctionComponent<Props> = (props: Props): ReactElement => {
                     }}
                     onMouseDown={(e) => {
                         e.stopPropagation();
-                        e.target.href &&
+                        // e.target.href &&
+                        url &&
                             callback &&
                             callback(checkUrl(item, url.toString()));
                     }}
