@@ -8,15 +8,11 @@ import Media from '../Media/Media';
 import Button from '../Button/Button';
 /** Features */
 import MoneyFormat from '../../features/MoneyFormat';
+/** Interfaces */
+import { IProduct } from '../../interfaces/IProduct';
 
 type Props = {
-    data: {
-        id: number;
-        name: string;
-        description: string;
-        price: number;
-        image: string;
-    }[];
+    data: IProduct[];
     row?: string;
     col?: string;
 };
@@ -29,13 +25,7 @@ type Props = {
  * @return {JSX.Element}
  */
 export default class Products extends Component<Props> {
-    data: {
-        id: number;
-        name: string;
-        description: string;
-        price: number;
-        image: string;
-    }[];
+    data: IProduct[];
     row?: string;
     col?: string;
 

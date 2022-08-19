@@ -8,7 +8,6 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 /** Styles */
 import navStyles from './nav.module.sass';
-import tooltipStyles from '../../styles/sass/components/tooltip.module.sass';
 /** Components */
 import Logo from '../Logo/Logo';
 import NavMenu from './NavMenu/NavMenu';
@@ -244,13 +243,11 @@ const Navbar: FunctionComponent = (): JSX.Element => {
                     </li>
                     <li>
                         <div
-                            className={`${navStyles.account_btn} ${tooltipStyles.tooltip}`}
+                            className={navStyles.account_btn}
                             // onClick={toggleAccount}
                         >
                             <FontAwesomeIcon icon={faUserCircle} />
-                            <span className={tooltipStyles.tooltip_text}>
-                                Account
-                            </span>
+                            <span>Account</span>
                         </div>
                     </li>
                 </ul>
