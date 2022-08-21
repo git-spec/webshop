@@ -1,12 +1,12 @@
 /** fontawesome */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faPinterest,
     faInstagram,
     faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 /** styles */
-import styles from "./footer.module.sass";
+import styles from './footer.module.sass';
 
 /**
  * Footer
@@ -43,7 +43,7 @@ const Footer = (): JSX.Element => {
                     </a>
                 </li>
             </ul>
-            <p>Copyright 2021 Ingo Fischer</p>
+            <p>Copyright Ingo Fischer {new Date().getFullYear()}</p>
         </footer>
     );
 };
