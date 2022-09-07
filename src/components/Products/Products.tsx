@@ -1,5 +1,5 @@
 /** Next, React */
-import React, { Component } from 'react';
+import React, { FunctionComponent } from 'react';
 /** Components */
 import Grid from '../Grid/Grid';
 import Box from '../Box/Box';
@@ -8,6 +8,9 @@ import Media from '../Media/Media';
 import Button from '../Button/Button';
 /** Features */
 import MoneyFormat from '../../features/MoneyFormat';
+import { addToCart } from '../../features/cart/cartSlice';
+/** Redux */
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
 /** Interfaces */
 import { IProduct } from '../../interfaces/IProduct';
 
@@ -19,56 +22,60 @@ type Props = {
 
 /**
  * Cards of products.
- * @class Products
- * @extends Component
  * @param {Props} props
  * @return {JSX.Element}
  */
-export default class Products extends Component<Props> {
-    data: IProduct[];
-    row?: string;
-    col?: string;
+const Products: FunctionComponent<Props> = (props: Props): JSX.Element => {
+    const dispatch = useAppDispatch();
+    // /**
+    //  * Handle dispatch to redux store.
+    //  * @param {IProduct} item
+    //  * @returns {IProduct}
+    //  */
+    // function handleDispatch(item: IProduct): {} {
+    //     console.log(item);
 
-    constructor(props: Props) {
-        super(props);
-        this.data = props.data;
-        this.row = props.row;
-        this.col = props.col;
-    }
+    //     return dispatch(addToCart(item));
+    // }
 
-    render() {
-        return (
-            <Grid gap={{ row: this.row, col: this.col }}>
-                {this.data.map((el) => {
-                    return (
-                        <Card key={el.id}>
-                            <CardHeader>
-                                <Media
-                                    media="image"
-                                    src={el.image}
-                                    alt={el.name}
-                                    width="100%"
-                                    height="100%"
+    return (
+        <Grid gap={{ row: props.row, col: props.col }}>
+            {props.data.map((el) => {
+                return (
+                    <Card key={el.id}>
+                        <CardHeader>
+                            <Media
+                                media="image"
+                                src={el.image}
+                                alt={el.name}
+                                width="100%"
+                                height="100%"
+                            />
+                        </CardHeader>
+                        <CardMain>
+                            <h3>{el.name}</h3>
+                            <p>{el.description}</p>
+                        </CardMain>
+                        <CardFooter>
+                            <Box>
+                                <MoneyFormat
+                                    local="de-DE"
+                                    currency="EUR"
+                                    value={el.price}
                                 />
-                            </CardHeader>
-                            <CardMain>
-                                <h3>{el.name}</h3>
-                                <p>{el.description}</p>
-                            </CardMain>
-                            <CardFooter>
-                                <Box>
-                                    <MoneyFormat
-                                        local="de-DE"
-                                        currency="EUR"
-                                        value={el.price}
-                                    />
-                                    <Button>Buy</Button>
-                                </Box>
-                            </CardFooter>
-                        </Card>
-                    );
-                })}
-            </Grid>
-        );
-    }
-}
+                                <Button
+                                    bRadius="8% / 20%"
+                                    callback={() => dispatch(addToCart(el))}
+                                >
+                                    Add to Cart
+                                </Button>
+                            </Box>
+                        </CardFooter>
+                    </Card>
+                );
+            })}
+        </Grid>
+    );
+};
+
+export default Products;

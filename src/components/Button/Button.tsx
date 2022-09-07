@@ -1,46 +1,49 @@
 /** React */
-import React, { Component, ReactChild, TouchEvent, MouseEvent } from 'react';
+import React, {
+    FunctionComponent,
+    ReactChild,
+    TouchEvent,
+    MouseEvent,
+} from 'react';
 /** Styles */
 import styles from './button.module.sass';
 
 type Props = {
     children?: ReactChild | ReactChild[];
+    callback?: {};
+    bRadius?: string;
 };
 
 /**
- * @class Button
- * @extends Component
+ * Button component.
+ * @param {Props} props
+ * @returns {JSX.Element}
  */
-export default class Button extends Component<Props> {
-    children?: ReactChild | ReactChild[];
-
-    constructor(props: Props) {
-        super(props);
-        this.children = props.children;
-    }
-
+const Button: FunctionComponent<Props> = (props: Props): JSX.Element => {
     /**
      * Handle click on button.
      * @param {MouseEvent | TouchEvent} e - Mouse or touch event.
      */
-    handleClick(e: MouseEvent | TouchEvent) {
+    function handleClick(e: MouseEvent | TouchEvent, callback: any): void {
         e.preventDefault();
+        callback();
     }
 
     /**
      * @return {JSX.Element} Button
      */
-    render(): JSX.Element {
-        return (
-            <button
-                type="button"
-                // {...this.props}
-                className={styles.btn}
-                onTouchStart={this.handleClick}
-                onClick={this.handleClick}
-            >
-                {this.children}
-            </button>
-        );
-    }
-}
+    return (
+        <button
+            type="button"
+            // {...this.props}
+            className={styles.btn}
+            style={{ borderRadius: props.bRadius }}
+            onTouchStart={(e) => handleClick(e, props.callback)}
+            onClick={(e) => handleClick(e, props.callback)}
+        >
+            {props.children}
+        </button>
+    );
+};
+
+export default Button;

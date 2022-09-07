@@ -230,7 +230,7 @@ const Navbar: FunctionComponent = (): JSX.Element => {
         </ul> */}
                 <ul className={navStyles.user_btns}>
                     <li>
-                        <Link href="#">
+                        <Link href="/cart">
                             <a className={navStyles.cart_btn}>
                                 <FontAwesomeIcon
                                     icon={faShoppingCart}
@@ -247,7 +247,7 @@ const Navbar: FunctionComponent = (): JSX.Element => {
                             // onClick={toggleAccount}
                         >
                             <FontAwesomeIcon icon={faUserCircle} />
-                            <span>Account</span>
+                            {/* <span>Account</span> */}
                         </div>
                     </li>
                 </ul>
